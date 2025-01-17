@@ -48,7 +48,7 @@ jobs:
       - name: Version
         run: npm version --no-git-tag-version "$(node -e "console.log(require('./package.json').version)")-pre.${{ github.run_number }}"
 
-      - name: Run lint, type checks and tests
+      - name: Run build
         run: npm --openssl-legacy-provider run build
 
       - name: Pre-release
