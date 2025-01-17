@@ -52,6 +52,6 @@ jobs:
         run: npm --openssl-legacy-provider run build
 
       - name: Pre-release
-        run: npm --openssl-legacy-provider publish
+        run: npm --openssl-legacy-provider publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
